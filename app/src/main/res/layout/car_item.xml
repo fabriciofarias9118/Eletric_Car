@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cv_car"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:layout_marginHorizontal="8dp"
+        android:elevation="4dp"
+        app:cardElevation="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:strokeWidth="0dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/card_cont"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/car_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
+                android:foregroundGravity="center_horizontal"
+                android:src="@drawable/eletric_car"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24sp"
+                android:text="Price:"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/car_image" />
+
+            <TextView
+                android:id="@+id/battery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24sp"
+                android:text="Battery:"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/price" />
+
+            <TextView
+                android:id="@+id/power"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24sp"
+                android:text="Power:"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/battery" />
+
+            <TextView
+                android:id="@+id/recharge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24sp"
+                android:text="Recharge:"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/power"
+
+                />
+
+
+            <TextView
+                android:id="@+id/price_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="38dp"
+                android:text="R$ 120.000,00"
+                app:layout_constraintStart_toEndOf="@+id/price"
+                app:layout_constraintTop_toBottomOf="@+id/car_image" />
+
+            <TextView
+                android:id="@+id/battery_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="93,4 kmh"
+                app:layout_constraintStart_toStartOf="@+id/price_value"
+                app:layout_constraintTop_toBottomOf="@+id/price_value" />
+
+            <TextView
+                android:id="@+id/power_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="646 cv"
+                app:layout_constraintStart_toStartOf="@+id/price_value"
+                app:layout_constraintTop_toBottomOf="@id/battery_value" />
+
+            <TextView
+                android:id="@+id/recharge_value"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="12dp"
+                android:text="23 min"
+                app:layout_constraintStart_toStartOf="@+id/price_value"
+                app:layout_constraintTop_toBottomOf="@id/power_value"
+                />
+
+            <ImageView
+                android:id="@+id/ic_fav"
+                android:layout_width="32dp"
+                android:layout_height="32dp"
+                android:src="@drawable/add_fav"
+                android:clickable="true"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:focusable="true"
+                android:layout_marginBottom="12dp"
+                android:layout_marginEnd="12dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
